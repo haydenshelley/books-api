@@ -18,4 +18,20 @@ class BooksController < ApplicationController
     @book = Book.find_by(id: params[:id])
     render :show
   end
+
+  def update
+    @book = Book.find_by(id: params[:id])
+    @book.update(
+      title: params[:title] || @book.title,
+      price: params[:price] || @book.price,
+      availability: params[:availability] || @book.availability
+    )
+    render :show
+  end
+
+  def destroy
+    @book = Book.find_by(id: params[:id])
+    @book.destroy
+    render json: {message: "book deleted"}
+  end
 end
