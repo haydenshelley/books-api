@@ -10,3 +10,10 @@
 #   book.save
 #   i += 1
 # end
+
+# 20.times do
+#   store = Store.create(
+#     name: Faker::Commerce.vendor,
+#     location: Faker::Address.street_address
+#   )
+# end
