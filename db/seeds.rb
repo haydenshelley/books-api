@@ -18,11 +18,11 @@
 #   )
 # end
 
-i = 2
-while i <= 1001
-  Inventory.create(
-    book_id: i,
-    store_id: rand(1...20)
-  )
-  i += 1
+
+inventories = Inventory.all
+avail = ["In Stock", "Out of Stock"]
+
+inventories.each do |inventory|
+  inventory.availability= avail.sample
+  inventory.save
 end
