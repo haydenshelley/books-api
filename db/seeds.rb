@@ -18,11 +18,20 @@
 #   )
 # end
 
+# inventories = Inventory.all
+# avail = ["In Stock", "Out of Stock"]
 
-inventories = Inventory.all
-avail = ["In Stock", "Out of Stock"]
+# inventories.each do |inventory|
+#   inventory.availability= avail.sample
+#   inventory.save
+# end
 
-inventories.each do |inventory|
-  inventory.availability= avail.sample
-  inventory.save
-end
+# i = 2
+# while i <= 1001
+#   inventory = Inventory.create(
+#     book_id: i,
+#     store_id: rand(1...20),
+#     availability: avail.sample
+#   )
+#   i += 1
+# end

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   delete "/books/:id" => "books#destroy"
 
   get "/stores" => "stores#index"
+  get "/stores/:id" => "stores#show"
 end
