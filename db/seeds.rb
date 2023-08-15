@@ -17,3 +17,12 @@
 #     location: Faker::Address.street_address
 #   )
 # end
+
+i = 2
+while i <= 1001
+  Inventory.create(
+    book_id: i,
+    store_id: rand(1...20)
+  )
+  i += 1
+end
