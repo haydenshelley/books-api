@@ -1,0 +1,8 @@
+<h1><%= @book.title.capitalize %></h1>
+<hr>
+<% @book.stores.each do |store| %>
+  <h2><%= store.name %></h2>
+  <h2><%= store.location %></h2>
+  <hr>
+<% end %>
+<a href="/books">Back to all books</a>
